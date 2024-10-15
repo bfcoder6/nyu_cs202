@@ -76,7 +76,7 @@ buyItem(int item_id, double budget)
  *      The entire order can be bought if:
  *          - The store carries all items.
  *          - All items are in stock.
- *          - The cost of the the entire order (cost of items plus
+ *          - The cost of the entire order (cost of items plus
  *            shipping for each item) is no more than the budget.
  *
  *      If multiple customers are attempting to buy at the same
