@@ -263,7 +263,7 @@ class Runner():
             print(data, file=out, end="")
 
     def run_test(self, binary):
-        p = Popen(["stdbuf", "-o0", "-e0", binary], stderr=subprocess.STDOUT, stdout=subprocess.PIPE)
+        p = Popen(["stdbuf", "-o0", "-e0", binary], stderr=subprocess.STDOUT, stdout=subprocess.PIPE, encoding="utf8")
         self.proc_output, _ = p.communicate()
 
     def match(self, *args, **kwargs):
