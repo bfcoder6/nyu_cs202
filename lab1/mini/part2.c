@@ -12,7 +12,8 @@ void
 set_point(struct point *pt, double x, double y)
 {
 	// TODO: Your code here.
-	assert(0);
+	pt->x = x;
+	pt->y = y;
 }
 
 // Compute the planar distance between two points. Recall that the
@@ -24,10 +25,15 @@ set_point(struct point *pt, double x, double y)
 //
 // Hint: Use the sqrt function from math.h.  You do not need to use
 // the pow function; x * x is sufficient to square a variable.
+
+double 
+square(double x) {
+	return x * x;
+}
+
 double
 point_dist(struct point *pt1, struct point *pt2)
 {
 	// TODO: Your code here.
-	assert(0);
-	return 0.0;
+	return sqrt(square(pt1->x - pt2->x) + square(pt1->y - pt2->y));
 }
